@@ -16,3 +16,12 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.get('/', ( request, response ) => {
   response.render('index')
 })
+
+//take the form input value from the request
+app.post( '/', ( request, response ) => {
+  response.send( request.body )
+  console.log( request.body )
+  let toNumber = request.body.number
+  let text = request.body.text
+  //sending SMS via nexmo...
+})
