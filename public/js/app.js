@@ -2,6 +2,23 @@ var numberField = document.querySelector( 'input[name=number]' )
 var textField = document.querySelector( 'input[name=text]' )
 var button = document.querySelector( 'input[type=button]' )
 var msg = document.querySelector( '.response' )
+var socket = io()
+
+socket.on('smsStatus', function(data){
+  displayStatus('Message ID ' + data.id + 'successfully sent to ' + data.number)
+})
+
+Notification.requestPermission()
+.then(function(status){
+  console.log(status)//when a user granted, status === 'granted', otherwise, 'denied'
+})
+
+function displayStatus(message){
+  var notification = new Notification('Nexmo', {
+    body: message,
+    icon: 'images/icon-nexmo.png'
+  })
+}
 
 textField.addEventListener( 'keyup', function( key ){
   if( ( key.keyCode || key.charCode ) === 13 ) send();

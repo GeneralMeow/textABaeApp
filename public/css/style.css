@@ -7,7 +7,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Noto Sans', sans-serif;
-  background: #148dcd;
+  background: #45cf81;
   background-size: cover;
   color: #fff;
 }
@@ -88,7 +88,7 @@ input[type=button]:active {
 .intro {
   position: relative;
   padding: 0 0.75em;
-  background: #148dcd;
+  background: #45cf81;
   line-height: 46px;
   border-radius: 6px;
   display: inline-block;
@@ -103,7 +103,7 @@ input[type=button]:active {
   left: 50px;
   top: 46px;
   border: 10px solid;
-  border-color: #148dcd transparent transparent #148dcd;
+  border-color: #45cf81 transparent transparent #45cf81;
 }
 .response {
   color: #f7d51b;
